@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fornecedor | Orbe Supply</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-pagina="fornecedores">
+  <div class="app">
+    <aside class="lateral" id="menu"></aside>
+
+    <main class="conteudo">
+      <div class="cabecalho-pagina">
+        <h1 id="titulo">Novo fornecedor</h1>
+      </div>
+
+      <div id="mensagem" class="mensagem" hidden></div>
+
+      <section class="cartao">
+        <form id="form-fornecedor" class="campos" novalidate>
+          <label class="campo largo">Nome *
+            <input type="text" id="nome" maxlength="150">
+          </label>
+          <label class="campo">CNPJ *
+            <input type="text" id="cnpj" maxlength="18" placeholder="00.000.000/0000-00" inputmode="numeric">
+            <small>Com ou sem pontuação (14 dígitos).</small>
+          </label>
+          <label class="campo">Telefone
+            <input type="text" id="telefone" maxlength="20" placeholder="(85) 99999-9999">
+          </label>
+          <label class="campo largo">E-mail
+            <input type="email" id="email" maxlength="150">
+          </label>
+          <div class="linha-botoes">
+            <button type="submit" class="botao">Salvar</button>
+            <a class="botao secundario" href="fornecedores.html">Cancelar</a>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/fornecedor-form.js"></script>
+</body>
+</html>

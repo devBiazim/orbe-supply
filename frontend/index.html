@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel | Orbe Supply</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-pagina="painel">
+  <div class="app">
+    <aside class="lateral" id="menu"></aside>
+
+    <main class="conteudo">
+      <div class="cabecalho-pagina">
+        <div>
+          <h1>Painel de estoque</h1>
+          <p class="subtitulo">Validade dos lotes e o que precisa sair primeiro.</p>
+        </div>
+        <div class="linha-botoes">
+          <span class="atualizado" id="atualizado"></span>
+          <button type="button" class="botao secundario" id="botao-atualizar">Atualizar</button>
+        </div>
+      </div>
+
+      <div id="mensagem" class="mensagem" hidden></div>
+      <div id="aviso" class="aviso" hidden></div>
+
+      <section class="indicadores" id="indicadores" aria-label="Indicadores de estoque"></section>
+
+      <section class="cartao tabela">
+        <div class="cartao-topo">
+          <div>
+            <h2>Fila FEFO</h2>
+            <p>First Expired, First Out: sai primeiro o lote que vence primeiro.</p>
+          </div>
+          <a class="botao secundario pequeno" href="estoque.html">Ver estoque completo</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Produto</th>
+              <th>Fornecedor</th>
+              <th class="numero">Estoque</th>
+              <th>Vencimento</th>
+              <th>Vida útil</th>
+              <th>Ação sugerida</th>
+            </tr>
+          </thead>
+          <tbody id="fila-fefo">
+            <tr><td class="vazio" colspan="7">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="duas-colunas">
+        <section class="cartao">
+          <div class="cartao-topo">
+            <div>
+              <h2>Estoque por faixa de validade</h2>
+              <p>Valor em estoque de cada faixa.</p>
+            </div>
+          </div>
+          <div id="faixas"></div>
+        </section>
+
+        <section class="cartao">
+          <div class="cartao-topo">
+            <div>
+              <h2>Valor em risco por fornecedor</h2>
+              <p>Lotes vencidos ou a até 7 dias de vencer.</p>
+            </div>
+          </div>
+          <div id="fornecedores-risco"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/painel.js"></script>
+</body>
+</html>

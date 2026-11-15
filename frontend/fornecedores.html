@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fornecedores | Orbe Supply</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-pagina="fornecedores">
+  <div class="app">
+    <aside class="lateral" id="menu"></aside>
+
+    <main class="conteudo">
+      <div class="cabecalho-pagina">
+        <div>
+          <h1>Fornecedores</h1>
+          <p class="subtitulo">Cadastre os fornecedores e acompanhe os produtos de cada um.</p>
+        </div>
+        <a class="botao" href="fornecedor-form.html">Novo fornecedor</a>
+      </div>
+
+      <div id="mensagem" class="mensagem" hidden></div>
+
+      <section class="cartao tabela">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>CNPJ</th>
+              <th>Telefone</th>
+              <th>E-mail</th>
+              <th class="acoes">Ações</th>
+            </tr>
+          </thead>
+          <tbody id="lista-fornecedores">
+            <tr><td class="vazio" colspan="5">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/fornecedores.js"></script>
+</body>
+</html>

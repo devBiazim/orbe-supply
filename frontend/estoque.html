@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estoque | Orbe Supply</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body data-pagina="estoque">
+  <div class="app">
+    <aside class="lateral" id="menu"></aside>
+
+    <main class="conteudo">
+      <div class="cabecalho-pagina">
+        <div>
+          <h1>Estoque</h1>
+          <p class="subtitulo">Todos os lotes, do que vence primeiro ao que vence por último.</p>
+        </div>
+      </div>
+
+      <div id="mensagem" class="mensagem" hidden></div>
+
+      <div class="ferramentas">
+        <input type="search" id="busca" placeholder="Buscar no estoque" aria-label="Buscar no estoque">
+        <div class="filtros" id="filtros" role="group" aria-label="Filtrar por situação"></div>
+      </div>
+
+      <div class="resumo-linha" id="resumo"></div>
+
+      <section class="cartao tabela">
+        <table>
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Fornecedor</th>
+              <th class="numero">Estoque</th>
+              <th class="numero">Preço</th>
+              <th>Vencimento</th>
+              <th>Vida útil</th>
+              <th>Ação sugerida</th>
+              <th class="acoes">Ações</th>
+            </tr>
+          </thead>
+          <tbody id="lista-estoque">
+            <tr><td class="vazio" colspan="8">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/estoque.js"></script>
+</body>
+</html>
