@@ -1,3 +1,6 @@
+const dns = require('dns');
+dns.setDefaultResultOrder('ipv4first');
+
 const { Pool, types } = require('pg');
 
 // Colunas DATE (código 1082) voltam como texto "AAAA-MM-DD".
